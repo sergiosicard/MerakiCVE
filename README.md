@@ -28,7 +28,7 @@ git clone [URL_to_your_GitHub_repository]
 cd [repository_folder_name]
 
 
-2. Install Dependencies
+### 2. Install Dependencies
  
 This project uses a few external Python libraries. It's recommended to create a requirements.txt file with the following content:
  
@@ -46,7 +46,7 @@ pip install -r requirements.txt
  
 For security, API keys are stored in a .env file, which should not be committed to source control. Create a file named .env in the root of the project directory.
  
-4. Obtain API Keys
+### 4. Obtain API Keys
  
 You will need two separate API keys to use this tool.
  
@@ -71,7 +71,7 @@ Under APIs, find and check the box for the Security Advisories API. This is the 
 Click Register.
 On your application's details page, you will see a section to generate a Bearer Token. Generate a new token (you can set its expiry time) and copy it.
  
-5. Populate Your .env File
+### 5. Populate Your .env File
  
 Open the .env file you created and add the keys you just obtained. The file should look exactly like this:
 
@@ -81,7 +81,7 @@ CISCO_API_TOKEN="your_cisco_api_token_here"
 # Meraki API Credentials
 MERAKI_API_KEY="your_meraki_api_key_here"
 
-Usage Workflow
+## Usage Workflow
  
 The process is a simple two-step command-line workflow.
  
