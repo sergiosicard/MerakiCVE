@@ -53,7 +53,7 @@ For security, API keys are stored in a .env file, which should not be committed 
  
 You will need two separate API keys to use this tool.
  
-A. Meraki Dashboard API Key
+#### A. Meraki Dashboard API Key
  
 This key allows the script to access your Meraki organization and retrieve the device inventory.
  
@@ -62,7 +62,7 @@ In the top-right corner, click on your account name/email and navigate to My Pro
 Scroll down to the API access section.
 If you don't have a key, click Generate API key. Copy the key and store it securely.
  
-B. Cisco Security Advisories (PSIRT) API Key
+#### B. Cisco Security Advisories (PSIRT) API Key
  
 This key allows the script to fetch security advisories from Cisco.
  
@@ -88,7 +88,7 @@ MERAKI_API_KEY="your_meraki_api_key_here"
  
 The process is a simple two-step command-line workflow.
  
-Step 1: Fetch Your Live Device Inventory
+### Step 1: Fetch Your Live Device Inventory
  
 First, run the fetch_inventory.py script. This will connect to the Meraki API and create a device_inventory.json file containing all your devices.
 ```
@@ -96,7 +96,7 @@ python fetch_inventory.py
 ```
 If your API key has access to multiple organizations, the script will prompt you to choose which one to scan.
  
-Step 2: Run the Vulnerability Analysis
+### Step 2: Run the Vulnerability Analysis
  
 Once your inventory file is created, run the main analysis script. This will download all Meraki advisories from Cisco and correlate them against your new inventory file.
 ```
@@ -106,7 +106,7 @@ Understanding the Output
  
 The script will produce a detailed report in your console, grouped by each affected device.
  
-Example Output:
+### Example Output:
 ```
 --- Analysis Complete: Found vulnerabilities on 1 device(s) ---
 
